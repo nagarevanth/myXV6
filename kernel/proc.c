@@ -784,16 +784,16 @@ struct proc *next_process = 0;
       // rest of the context-switch logic works.
       p = next_process; 
 
-      for (int level = 0; level < NMLFQ; level++)
-      {
-        printf("%d %d ",ticks, level);
-        for (int z = 0; z < mlfq[level].end; z++)
-        {
-          printf("%d ", (mlfq[level].n)[z]->pid);
-        }
-        printf("\n");
-      }
-      printf("\n");
+      // for (int level = 0; level < NMLFQ; level++)
+      // {
+      //   printf("%d %d ",ticks, level);
+      //   for (int z = 0; z < mlfq[level].end; z++)
+      //   {
+      //     printf("%d ", (mlfq[level].n)[z]->pid);
+      //   }
+      //   printf("\n");
+      // }
+      // printf("\n");
       
       p->state = RUNNING;
       p->enter_ticks = ticks;
